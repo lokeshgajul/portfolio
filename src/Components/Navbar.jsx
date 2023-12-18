@@ -5,7 +5,10 @@ import { TfiClose } from "react-icons/tfi";
 function Navbar() {
   const [menu, setMenu] = useState(false);
 
-  const handleClick = () => setMenu(!menu);
+   const handleClick = () => {
+    console.log("handleClick triggered");
+    setMenu(!menu);
+  };
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("Projects");
