@@ -5,7 +5,10 @@ import { TfiClose } from "react-icons/tfi";
 function Navbar() {
   const [menu, setMenu] = useState(false);
 
-  const handleClick = () => setMenu(!menu);
+  const handleClick = () => {
+    console.log("handleClick triggered");
+    setMenu(!menu);
+  };
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("Projects");
@@ -44,7 +47,7 @@ function Navbar() {
           </div>
           <ul
             className={`md:flex max-md:absolute max-md:bg-slate-300 left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-700 ease-in-out top-16 md:space-x-4 ${
-              menu ? "left-0" : "-left-full"
+              menu ? "left-0" : "translate-x-fit max-md:-translate-x-full"
             }`}
           >
             <li className="cursor-pointer hover:text-blue-400 max-md:p-1">
