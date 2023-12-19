@@ -41,7 +41,7 @@ function Navbar() {
         <div>
           <div
             onClick={handleClick}
-            className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+            className="text-3xl absolute right-8 top-9 cursor-pointer md:hidden"
           >
             {menu ? <TfiClose size={20} /> : <RiMenu3Fill size={20} />}
           </div>
