@@ -14,7 +14,7 @@ function Education() {
           <div className="flex justify-center items-center col-span-2 bg-slate-200 m-3 rounded-md p-5 shadow-xl cursor-pointer">
             <LuSchool size={40} />
             <h2 className="text-xl font-semiBold text-black mx-3">SSC </h2>
-            <div className="p-4">
+            <div className="pl-4">
               <span className="text-gray-900 font-medium text-lg">
                 Vikas High School
               </span>{" "}
@@ -23,9 +23,7 @@ function Education() {
           </div>
 
           <div className="flex justify-center items-center col-span-2 bg-slate-200 m-3 rounded-md p-5 shadow-xl skill-div   cursor-pointer">
-            <div className="max-md:text-2xl">
-              <FaSchool size={40} />
-            </div>
+            <FaSchool size={40} />
             <h2 className="text-xl font-semiBold text-black mx-3"> Diploma </h2>
             <div className="p-4">
               <span className="text-gray-900 font-medium  text-lg"></span>{" "}

@@ -5,6 +5,7 @@ import Education from "./Components/Education";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects";
+import ScrollUp from "./Components/ScrollUp";
 import Skills from "./Components/Skills";
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
+
       <About />
       <Skills />
       <Education />
       <Projects />
       <Contact />
+      <ScrollUp />
     </div>
   );
 }

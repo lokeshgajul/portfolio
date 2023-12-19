@@ -26,6 +26,10 @@ function Home() {
     const projectsSection = document.getElementById("Projects");
     projectsSection.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToHome = () => {
+    const projectsSection = document.getElementById("Home");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  };
 
   const openResume = () => {
     window.open(resumePDF);
@@ -33,7 +37,10 @@ function Home() {
 
   return (
     <div>
-      <div className="flex max-md:flex-col flex-row justify-center items-center bg-slate-300 p-3">
+      <div
+        className="flex max-md:flex-col flex-row justify-center items-center bg-slate-300 p-3"
+        id="Home"
+      >
         <div className="py-3 px-10 md:p-24">
           <h2 className="text-2xl">Hey!</h2>
           {animatedText.length > 0 && (
