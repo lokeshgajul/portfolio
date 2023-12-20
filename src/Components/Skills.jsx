@@ -6,10 +6,19 @@ import {
   BiLogoReact,
   BiLogoMongodb,
 } from "react-icons/bi";
+import PortfolioHook from "../context/PortfolioContext";
 function Skills() {
+  const { theme } = PortfolioHook();
   return (
     <>
-      <div className="flex flex-col justify-center items-center" id="Skills">
+      <div
+        className="flex flex-col justify-center items-center"
+        id="Skills"
+        style={{
+          backgroundColor: theme === "dark" ? "#303034" : "white",
+          color: theme === "dark" ? "white " : "black",
+        }}
+      >
         <h1 className="flex justify-center items-center text-4xl font-semibold ">
           Skills
         </h1>

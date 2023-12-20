@@ -1,9 +1,16 @@
 import logo from "../assets/portfolioImage.png";
+import PortfolioHook from "../context/PortfolioContext";
 function About() {
+  const { theme } = PortfolioHook();
+
   return (
     <div
-      className="flex flex-row-reverse max-md:flex-col justify-center items-center px-6 p-10"
+      className="flex flex-row-reverse max-md:flex-col justify-center items-center px-6 p-10 bg-[#303034]"
       id="About"
+      style={{
+        backgroundColor: theme === "dark" ? "#303034 " : "white",
+        color: theme === "dark" ? "white " : "black",
+      }}
     >
       <div className="p-3 md:w-[50%]">
         <h2 className="text-3xl font-semibold">About Me</h2>

@@ -7,19 +7,21 @@ import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects";
 import ScrollUp from "./Components/ScrollUp";
 import Skills from "./Components/Skills";
+import { PortfolioProvider } from "./context/PortfolioContext";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Contact />
-      <ScrollUp />
+      <PortfolioProvider>
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Education />
+        <Projects />
+        <Contact />
+        <ScrollUp />
+      </PortfolioProvider>
     </div>
   );
 }

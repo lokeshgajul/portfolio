@@ -4,7 +4,9 @@ import textUtils from "../assets/textUtils.png";
 import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
+import PortfolioHook from "../context/PortfolioContext";
 function Projects() {
+  const { theme } = PortfolioHook();
   const [expandProject, setExpandProject] = useState(null);
 
   const toggleExpand = (index) => {
@@ -39,8 +41,12 @@ function Projects() {
   ];
   return (
     <div
-      className="flex justify-center flex-col items-center p-4 mb-14"
+      className="flex justify-center flex-col items-center p-5 md:p-14"
       id="Projects"
+      style={{
+        backgroundColor: theme === "dark" ? "#303034 " : "white",
+        color: theme === "dark" ? "white " : "black",
+      }}
     >
       <h1 className="flex justify-center items-center text-4xl font-semibold mb-6">
         Projects
@@ -48,7 +54,11 @@ function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {projects.map((item, index) => (
           <div
-            className="max-w-[20rem] rounded overflow-hidden shadow-lg m-4 bg-slate-200 transition-opacity"
+            className={`max-w-[20rem] rounded overflow-hidden shadow-lg m-4  transition-opacity ${
+              theme === "dark"
+                ? "bg-[#404047] text-white"
+                : "bg-slate-300 text-black"
+            } `}
             key={index}
           >
             <img
@@ -58,7 +68,7 @@ function Projects() {
             />
             <div className="px-4" onClick={() => toggleExpand(index)}>
               <div className="font-bold text-xl my-2">{item.name}</div>
-              <p className="text-gray-700 text-base">
+              <p className=" text-base">
                 {index === expandProject
                   ? item.description
                   : `${item.description.slice(0, 140)} `}
@@ -70,7 +80,7 @@ function Projects() {
             <div className="flex justify-end items-end p-4 space-x-3 text-[1.3rem]">
               <a
                 href={item.link}
-                className="text-gray-700 hover:text-gray-800"
+                className=" hover:text-gray-800"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -78,7 +88,7 @@ function Projects() {
               </a>
               <a
                 href={item.github}
-                className="text-gray-700 hover:text-gray-800"
+                className=" hover:text-gray-800"
                 target="_blank"
                 rel="noreferrer"
               >
