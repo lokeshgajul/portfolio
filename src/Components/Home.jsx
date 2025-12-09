@@ -8,7 +8,7 @@ function Home() {
   const [animatedText, setAnimatedText] = useState("");
   const [animationProgress, setAnimationProgress] = useState(0);
   const [isAnimationComplete, setIsAnimationComplete] = useState(false);
-  const text = "I am Lokesh Santosh Gajul.";
+  const text = "I'm Lokesh";
 
   const { theme, toggleTheme } = PortfolioHook();
 
